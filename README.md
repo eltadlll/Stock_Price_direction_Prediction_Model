@@ -27,14 +27,17 @@ date = '2010-01-01'
 length2 = [14, 20, 50]
 Use code with caution.
 
-Key Logic
-df.ta.macd(append=True): Uses the strategy system to quickly generate technical features.
-df['Target'] = df['Close'].pct_change().shift(-1): This crucial step changes the prediction target from raw price to percentage return.
-StandardScaler: Applied to all models that are sensitive to data range (NN, SVR, Linear Regression).
-Interpreting the Results
-The output metrics table is the most important part:
-Model	MAE (Mean Abs. Error)	R2 Score	Direction Acc.
-The highest linear regression value is 	0.0123 MAE	-0.1520 R2	58.20% Directional Accuracy
+## Key Logic
+
+#### df.ta.macd(append=True): Uses the strategy system to quickly generate technical features.
+
+#### df['Target'] = df['Close'].pct_change().shift(-1): This crucial step changes the prediction target from raw price to percentage return.
+
+####StandardScaler: Applied to all models that are sensitive to data range (NN, SVR, Linear Regression).
+
+### Interpreting the Results
+The output metrics table is the most important part: Model	MAE (Mean Abs. Error)	R2 Score	Direction Acc.
+The highest is linear regression with values 	0.0123 MAE	-0.1520 R2	58.20% Directional Accuracy
 MAE: The average percentage point error.
 R² Score: A low score (e.g., near 0.0) is normal for returns prediction and means the model captures a tiny edge. A negative score means the model is useless.
 Directional Accuracy: Anything above 51% is a potential edge in trading.
