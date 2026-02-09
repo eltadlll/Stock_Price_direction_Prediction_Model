@@ -33,7 +33,7 @@ Use code with caution.
 
 #### df['Target'] = df['Close'].pct_change().shift(-1): This crucial step changes the prediction target from raw price to percentage return.
 
-####StandardScaler: Applied to all models that are sensitive to data range (NN, SVR, Linear Regression).
+#### StandardScaler: Applied to all models that are sensitive to data range (NN, SVR, Linear Regression).
 
 ### Interpreting the Results
 The output metrics table is the most important part: Model	MAE (Mean Abs. Error)	R2 Score	Direction Acc.
